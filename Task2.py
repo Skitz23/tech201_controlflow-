@@ -20,16 +20,21 @@ else:
 
 # FizzBuzz - Write a program that prints numbers from 1 - 100 but for multiples of 3 print "Fizz" and for multiples of 5 print "Buzz". For multiples of 3 and 5 print "FizzBuzz
 
-for num in range(1,100):
-    if num % 3 == 0 and num % 5 == 0:
-        print("FizzBuzz: "+str())
-    elif num % 3 == 0:
-        print("Fizz:" +str())
-    elif num % 5 == 0:
-        print("Buzz:" +str())
+def fizzBuzz(s):
+    if s % 3 == 0 and s % 5 == 0:
+        print("FizzBuzz")
+    elif s % 3 == 0:
+        print("Fizz")
+    elif s % 5 == 0:
+        print("Buzz")
+    elif s % 3 == 0 and s % 5 == 0:
+        print("FizzBuzz")
     else:
-        print(num)
+        print(s)
 
+
+for i in range(1, 100):
+    fizzBuzz(i)
 # Write a program that has a number variable assigned between 1-20. Give the user three guesses to guess the number correctly. Try to give them a clue each time (do they need to go higher or lower?). Make sure to tell them if their guess does not fit in the limitations (1-20).
 
 import random
