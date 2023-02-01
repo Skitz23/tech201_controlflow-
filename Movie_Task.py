@@ -1,12 +1,17 @@
-age = input("What is your age?")
+def How_old(years):
+    if years.isdigit() and -1 < int(years) < 117:
+        if int(years) < 12:
+            return print("You can watch universal or pg films")
+        elif 12 <= int(years) < 15:
+            return print("You can watch 12 films")
+        elif 14 < int(years) < 18:
+            return print("You can watch films that are 15")
+        else:
+            return print("You can watch films that are 18 or above if you show ID")
+    else:
+        years = input("How old are you? ")
+        How_old(years)
 
-if age.isdigit() and int(age) < 1 and int(age) > 117 :
-    print("Enter an age between 1 and 117")
-elif age.isdigit() and int(age) >= 1 and int(age) < 10:
-    print(f"You are {age}  able to watch universal movies")
-elif age.isdigit() and int(age) >= 10 and int(age) < 12:
-    print(f"Your are {age} are able to watch universal and pg movies")
-elif age.isdigit() and int(age) >= 13 and int(age) < 15:
-    print(f"Your are {age} are able to watch universal, pg and 15 rated movies with adult supervision")
-elif age.isdigit() and int(age) >= 18 and int(age) < 117:
-    print(f"Your are {age} are able to watch universal, pg, 15 rated films and 18 plus")
+
+years = input("How old are you? ")
+How_old(years)
